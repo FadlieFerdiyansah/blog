@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
+    //Test
     public function index()
     {
         $posts = Post::latest()->get();
