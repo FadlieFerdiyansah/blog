@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <form action="{{ route('posts.update', $post) }}" method="post" enctype="multipart/form-data" class="w-5/12">
+                    <form action="{{ route('posts.update', $post) }}" method="post" enctype="multipart/form-data" class="w-full md:w-5/12">
                         @csrf
                         @method('put')
 

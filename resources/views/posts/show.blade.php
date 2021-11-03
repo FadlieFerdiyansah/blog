@@ -19,19 +19,6 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            @can('update', $post)
-                <div class="flex justify-center">
-                    <a href="{{ route('posts.edit', $post) }}"
-                        class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
-                        Edit
-                    </a>
-                    <form action="{{ route('posts.destroy', $post) }}" method="post">
-                        @csrf
-                        @method('delete')
-                        <x-button type="submit" class="ml-2 bg-red-600">Delete</x-button>
-                    </form>
-                </div>
-            @endcan
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <img class="w-full object-cover object-center" src="{{ $post->thumbnail }}" style="height: 450px">
@@ -39,7 +26,7 @@
                         <div class="flex justify-between">
                             <div>
                                 <div class="font-bold text-3xl mb-2">{{ $post->title }}</div>
-                                <p class="text-gray-700 text-base w-4/6">
+                                <p class="text-gray-700 text-base w-full">
                                     {{ $post->body }}
                                 </p>
                             </div>
